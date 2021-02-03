@@ -3,3 +3,17 @@ $text:#555555;
 $hover-blue:#145fb0;
 $tag:#7347c1;
 $tag-btn:#f1f3f6;
+
+@mixin text-clamp($lines: 4, $line-height: false) {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;
+}
+
+@mixin text-clamp_1($lines: 3, $line-height: false) {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;
+}
