@@ -1,7 +1,10 @@
 $(function () {
   var mixer = mixitup('.products__items');
-  var $disabledResults = $(".js-example-disabled-results");
-  $disabledResults.select2();
+  $(".create__select").select2({
+    selectionCssClass:  'create__select',
+    dropdownCssClass: 'create__option'
+  });
+
   new Swiper('.swiper-container', {
     navigation: {
       nextEl: '.swiper-button-next',
@@ -13,10 +16,9 @@ $(function () {
     initial_value: 4.5,
     readonly: true,
   }
-  $(".resume__star").rate(options);
+  $(".product-card__star").rate(options);
   var options = {
     initial_value: 4.5,
     readonly: true,
   }
-  $(".products__star").rate(options);
 });

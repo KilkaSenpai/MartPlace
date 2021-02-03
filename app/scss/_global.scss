@@ -12,6 +12,9 @@ body {
   font-family: 'Quicksand', sans-serif;
   font-weight: 400;
   font-size: 16px;
+  line-height: 2;
+  color: $text;
+  background-color: #fff;
 }
 
 body::-webkit-scrollbar {
@@ -20,12 +23,12 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb {
   border-radius: 3px;
-  background: $btn;
-  opacity: .5;
+  background-color: $btn;
+  opacity: 0.5;
 }
 
 body::-webkit-scrollbar-track {
-  background: #fff;
+  background-color: #fff;
   cursor: pointer;
 }
 
@@ -37,11 +40,10 @@ button {
 button,
 input,
 a {
-  outline: none;
+  outline: transparent;
 }
 
 a {
-  display: inline-block;
   text-decoration: none;
 }
 
@@ -67,14 +69,67 @@ p {
   padding: 0 15px;
 }
 
-.images {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.btn {
+  color: #fff;
+  font-size: 15px;
+
+  &--blue {
+    background-color: $btn;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $hover-blue;
+    }
+  }
+
+  &--md {
+    padding: 6px 31px;
+    border-radius: 23px;
+  }
+
+  &--lg {
+    padding: 17px 31px;
+    border-radius: 28px;
+  }
+
+  &--sm {
+    padding: 5px 14px;
+    border-radius: 14px;
+    line-height: 1.2;
+  }
+
+  &--transparent {
+    border: 1px solid #fff;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: #fff;
+      color: $btn;
+    }
+  }
+
+  &--silver {
+    background-color: $tag-btn;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #c4cad2;
+    }
+  }
 }
 
 .title {
   font-size: 30px;
-  padding: 38px 30px;
   color: #000;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0)
 }
