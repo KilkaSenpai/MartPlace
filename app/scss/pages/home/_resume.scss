@@ -1,0 +1,133 @@
+.resume {
+  background-color: #eff1f5;
+  padding: 120px 0;
+
+  &__title {
+    background-color: #fff;
+    position: relative;
+    padding: 25px 30px;
+    margin-bottom: 55px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 rgba(108, 111, 115, 0.1);
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-family: 'Linearicons-Free';
+    font-size: 14px;
+    color: #fff;
+  }
+
+  .swiper-button-next:after {
+    content: "\e876";
+  }
+
+  .swiper-button-prev:after {
+    content: "\e875";
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    left: auto;
+    background-color: #7347c1;
+    top: 54px;
+    width: 55px;
+    height: 45px;
+    transition: background-color 0.3s;
+    outline-color: $tag;
+
+    &:hover {
+      background-color: #613ba6;
+    }
+  }
+
+  .swiper-button-prev {
+    right: 85px;
+    border-radius: 23px 0 0 23px;
+  }
+
+  .swiper-button-next {
+    border-radius: 0 23px 23px 0;
+    right: 30px;
+  }
+
+  .product-card__star {
+    font-size: 17px;
+    color: #ffc000;
+    width: 100%;
+    margin-top: 5px;
+  }
+}
+
+.resume-product {
+  max-width: 100%;
+  display: flex;
+
+  &:hover {
+    .product-card__link-wrap {
+      border-radius: 4px 0 0 4px;
+    }
+  }
+
+  .product-card {
+    &__img-wrap {
+      max-width: 555px;
+      width: 100%;
+      margin-right: 50px;
+      min-height: 450px;
+    }
+
+    &__img {
+      min-height: 450px;
+      max-width: 555px;
+      border-radius: 4px 0 0 4px;
+    }
+
+    &__content-wrap {
+      padding: 30px 50px 0 0;
+    }
+
+    &__title {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    &__user-wrap {
+      margin-bottom: 25px;
+    }
+
+    &__list {
+      list-style: none;
+      display: flex;
+      margin-left: -10px;
+      margin-bottom: 40px;
+    }
+
+    &__item {
+      margin-left: 10px;
+    }
+
+    &__tag {
+      color: #868c96;
+    }
+
+    &__box {
+      padding: 25px 0 0 0;
+    }
+
+    &__btn-wrap {
+      max-width: 230px;
+      align-items: center;
+    }
+
+    &__star {
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    &__box-link {
+      background-color: $btn;
+      color: #fff;
+    }
+  }
+}

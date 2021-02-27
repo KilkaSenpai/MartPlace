@@ -1,0 +1,46 @@
+.info {
+    background-color: #212225;
+    padding: 95px 0 90px 0;
+
+    &__item-wrap {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        text-align: center;
+    }
+
+    &__item {
+        line-height: 1.7;
+        &--yellow {
+            color: #feb71d;
+        }
+
+        &--light-blue {
+            color: #58c9e9;
+        }
+
+        &--green {
+            color: #77de51;
+        }
+
+        &--red {
+            color: #ff6a6d;
+        }
+    }
+
+    &__img {
+        display: inline-block;
+        font-family: 'Linearicons-Free';
+        font-size: 48px;
+        margin-bottom: 5px;
+    }
+
+    &__number {
+        font-size: 36px;
+      }
+
+    &__text {
+        color: #fff;
+        font-size: 18px;
+    }
+}

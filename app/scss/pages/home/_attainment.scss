@@ -1,0 +1,43 @@
+.attainment {
+    padding: 200px 0 115px;
+  
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+    }
+  
+    &__item {
+      padding: 25px 30px 50px;
+      max-width: 360px;
+      width: 100%;
+      text-align: center;
+      border-radius: 4px;
+      transition: all 0.3s;
+  
+      &:hover {
+        box-shadow: 0 2px 50px 0 rgba(0, 0, 0, 0.08);
+      }
+    }
+  
+    &__img {
+      display: block;
+      min-height: 120px;
+      max-width: 120px;
+      width: 100%;
+      margin: 0 auto 25px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  
+    &__title {
+      font-size: 24px;
+      color: #010101;
+      margin-bottom: 10px;
+    }
+  
+    &__text {
+      @include text-clamp(4);
+    }
+  }

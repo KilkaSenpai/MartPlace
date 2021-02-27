@@ -1,0 +1,111 @@
+.feedback {
+    text-align: center;
+    padding: 110px 0;
+    .container {
+        position: relative;
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__title {
+        font-size: 36px;
+    }
+
+    &__title-name {
+        color: $btn;
+    }
+
+    &__text {
+        max-width: 675px;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 55px;
+    }
+
+    &__items {
+        margin-bottom: 60px;
+    }
+
+    &__item {
+        position: relative;
+        padding: 45px 40px;
+        text-align: left;
+        border-left: 2px solid $btn;
+        border-radius: 0 4px 4px 0;
+        box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+
+        &::before {
+            content: "\e83f";
+            position: absolute;
+            top: 55px;
+            right: 40px;
+            font-family: 'Linearicons-Free';
+            font-size: 60px;
+            color: #e8e8e8;
+            line-height: 1;
+        }
+    }
+    &__item-text {
+        @include text-clamp(4);
+    }
+
+    &__link {
+        color: #fff;
+        display: inline-block;
+        padding: 12px 34px;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-family: 'Linearicons-Free';
+        font-size: 14px;
+        color: #613ba6;
+    }
+
+    .swiper-button-next:after {
+        content: "\e876";
+    }
+
+    .swiper-button-prev:after {
+        content: "\e875";
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        background-color: #fff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0px 4px 15px 0px rgba(67, 67, 67, 0.2);
+        transition: background-color 0.3s;
+        top: 330px;
+        outline-color: $btn;
+
+        &:hover {
+            background-color: $tag-btn;
+        }
+    }
+
+    .swiper-button-prev {
+        left: -10px;
+    }
+
+    .swiper-button-next {
+        right: -10px;
+    }
+}
+
+.feedback__user {
+    margin-bottom: 25px;
+
+    .user__img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .user__name {
+        font-size: 20px;
+    }
+}

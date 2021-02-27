@@ -1,0 +1,29 @@
+.banner {
+    background-image: linear-gradient(-90deg, rgb(13, 62, 242) 0%, rgb(64, 48, 201) 46%, rgb(114, 33, 160) 100%);
+    text-align: center;
+    color: #fff;
+    &__inner {
+        padding: 80px 0 120px 0;
+    }
+
+    &__title {
+        font-size: 36px;
+    }
+
+    &__text {
+        font-size: 18px;
+        margin-bottom: 60px;
+    }
+
+    &__link {
+        background-color: #fff;
+        color: $btn;
+        padding: 17px 43px;
+        box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: $tag-btn;
+        }
+    }
+}

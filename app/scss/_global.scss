@@ -12,7 +12,7 @@ body {
   font-family: 'Quicksand', sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 2;
+  line-height: 1.9;
   color: $text;
   background-color: #fff;
 }
@@ -40,7 +40,7 @@ button {
 button,
 input,
 a {
-  outline-color:$btn;
+  outline-color: $btn;
 }
 
 a {
@@ -67,6 +67,10 @@ p {
   max-width: 1170px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.title-line {
+  @include text-clamp(1);
 }
 
 .btn {

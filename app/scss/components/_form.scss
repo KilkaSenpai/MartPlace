@@ -1,0 +1,32 @@
+
+.form {
+    &__input {
+      display: block;
+      width: 100%;
+      padding: 13px 70px 13px 24px;
+      font-size: 15px;
+      color: #898f96;
+      border-radius: 23px;
+      border: 1px solid #d9dfe5;
+      outline: transparent;
+  
+      &:focus {
+        border: 1px solid $btn;
+      }
+    }
+  
+    &__btn {
+      position: absolute;
+      right: 0;
+      top: 0;
+      max-width: 70px;
+      height: 45px;
+  
+      &::before {
+        font-family: 'Linearicons-Free';
+        content: "\e86f";
+        font-size: 15px;
+        color: #fff;
+      }
+    }
+  }

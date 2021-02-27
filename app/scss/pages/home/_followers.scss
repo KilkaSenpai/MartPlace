@@ -1,0 +1,53 @@
+.followers {
+    background-color: #eff1f5;
+    padding: 120px 0;
+
+    &__title {
+        background-color: #fff;
+        position: relative;
+        padding: 25px 30px;
+        margin-bottom: 55px;
+        box-shadow: 0 2px 4px 0 rgba(108, 111, 115, 0.1);
+        border-radius: 4px;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-family: 'Linearicons-Free';
+        font-size: 14px;
+        color: #fff;
+    }
+
+    .swiper-button-next:after {
+        content: "\e876";
+    }
+
+    .swiper-button-prev:after {
+        content: "\e875";
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        left: auto;
+        background-color: $btn;
+        top: 54px;
+        width: 55px;
+        height: 45px;
+        transition: background-color 0.3s;
+        outline-color: $btn;
+
+        &:hover {
+            background-color: $hover-blue;
+        }
+    }
+
+    .swiper-button-prev {
+        right: 85px;
+        border-radius: 23px 0 0 23px;
+    }
+
+    .swiper-button-next {
+        border-radius: 0 23px 23px 0;
+        right: 30px;
+    }
+}

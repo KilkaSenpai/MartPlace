@@ -1,0 +1,145 @@
+.create {
+    position: relative;
+    min-height: 725px;
+    background-image: linear-gradient(to right, #2c4ed0 5%, #2145c9 37%, #1035bf 77%, #092fba 99%, #1745ed 100%, #2e5afb 100%, #1745ed 100%);
+  
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -50px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      max-width: 1110px;
+      width: 100%;
+      min-height: 135px;
+      background-color: #fff;
+      border-radius: 6px;
+      opacity: 0.5;
+    }
+  
+    &::after {
+      max-width: 1080px;
+      width: 100%;
+      bottom: -37px;
+    }
+  
+    &__inner {
+      padding-top: 170px; // Я не нашел другой способ..
+      text-align: center;
+      color: #f3f3f8;
+    }
+  
+    &__title {
+      font-size: 60px;
+      line-height: 1.2;
+      margin-bottom: 28px;
+      text-shadow: 0 2px 2 rgba(0, 0, 0, 0.2);
+    }
+  
+    &__subtitle {
+      display: block;
+      font-weight: 700;
+    }
+  
+    &__text {
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 70px;
+    }
+  
+    &__link {
+      color: #fff;
+  
+      &+& {
+        margin-left: 25px;
+      }
+  
+      &:hover {
+        box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.1);
+      }
+    }
+  
+    &__search {
+      position: absolute;
+      bottom: -68px;
+      z-index: 1;
+    }
+  
+    &__form-inner {
+      position: relative;
+      display: flex;
+      min-width: 1140px;
+      padding: 39px;
+      background-color: #fff;
+      box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.08);
+      border-radius: 6px;
+    }
+  
+    &__input {
+      max-width: 612px;
+      width: 100%;
+      padding: 18px 25px;
+      color: #676767;
+      border: 1px solid #dcdcdc;
+      border-radius: 6px 0 0 6px;
+    }
+  
+    .create__select {
+      border: 1px solid #dcdcdc;
+      border-left: none;
+      border-radius: 0 6px 6px 0;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      width: 190px;
+      position: relative;
+      padding-left: 20px;
+      padding-right: 40px;
+      outline: none;
+  
+      &::before {
+        position: absolute;
+        content: "\e874";
+        right: 20px;
+        top: 16px;
+        font-family: 'Linearicons-Free';
+        font-size: 12px;
+        color: #676767;
+      }
+    }
+  
+    &__btn {
+      margin-left: auto;
+      margin-right: 0;
+      padding: 19px 67px;
+      border-radius: 4px;
+      color: #fff;
+  
+      &:hover {
+        background: #145fb0;
+      }
+    }
+  
+    &__option {
+      color: $text;
+      border: 1px solid #dcdcdc;
+    }
+  
+    .select2-container .select2-selection--single .select2-selection__rendered {
+      padding: 0;
+      color: $text;
+    }
+  
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+      display: none;
+    }
+  
+    .select2-container--open {
+      border-left: 1px solid #dcdcdc;
+      width: 191px !important;
+      left: -1px;
+    }
+  
+  }
