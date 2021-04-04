@@ -131,10 +131,12 @@
 
         &__item {
             padding: 10px 10px 25px;
+
             &::after {
                 font-size: 35px;
             }
         }
+
         &__img {
             font-size: 50px;
         }

@@ -160,9 +160,11 @@
 @media(max-width:576px) {
     .footer {
         padding: 30px 0 0;
+
         &__inner {
             padding-bottom: 20px;
         }
+
         &__item {
             margin: 20px 30px;
         }
@@ -204,6 +206,7 @@
                 font-size: 18px;
             }
         }
+
         &__form {
             margin-bottom: 15px;
         }

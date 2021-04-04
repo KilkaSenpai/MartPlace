@@ -15,7 +15,7 @@ $(function () {
   new Swiper('.followers__container', {
     slidesPerView: 3,
     spaceBetween: 30,
-    centeredSlides:true,
+    centeredSlides: true,
     navigation: {
       nextEl: '.followers__arrow-right',
       prevEl: '.followers__arrow-left',

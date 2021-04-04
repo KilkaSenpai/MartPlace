@@ -142,11 +142,12 @@ p {
     }
   }
 }
+
 @media(max-width:576px) {
   .btn {
     font-size: 13px;
   }
- }
+}
 
 .title {
   font-size: 30px;
@@ -229,6 +230,7 @@ p {
     }
   }
 }
+
 @media(max-width:576px) {
   .arrows {
     &__item {
@@ -282,6 +284,7 @@ p {
   &:active {
     border: 1px solid $btn;
   }
+
   &--md {
     padding: 6px 20px;
   }

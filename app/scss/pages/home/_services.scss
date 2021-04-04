@@ -57,6 +57,7 @@
         color: $btn;
     }
 }
+
 @media(max-width:992px) {
     .services {
         &__title {
@@ -64,19 +65,24 @@
         }
     }
 }
+
 @media(max-width:576px) {
     .services {
         flex-direction: column;
+
         &__item {
             padding: 30px 15px;
             height: 330px;
         }
+
         &__img {
             margin-bottom: 0;
         }
+
         &__title {
             font-size: 20px;
         }
+
         &__text {
             font-size: 15px;
             margin-bottom: 15px;
