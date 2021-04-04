@@ -1,11 +1,8 @@
 .feedback {
     text-align: center;
     padding: 110px 0;
-    .container {
-        position: relative;
-    }
 
-    &__container {
+    &__inner {
         position: relative;
     }
 
@@ -26,6 +23,7 @@
 
     &__items {
         margin-bottom: 60px;
+        list-style: none;
     }
 
     &__item {
@@ -47,6 +45,23 @@
             line-height: 1;
         }
     }
+
+    &__user {
+        margin-bottom: 25px;
+
+        .user {
+            &__img {
+                width: 80px;
+                height: 80px;
+            }
+
+            &__name {
+                font-size: 20px;
+                display: block;
+            }
+        }
+    }
+
     &__item-text {
         @include text-clamp(4);
     }
@@ -57,55 +72,119 @@
         padding: 12px 34px;
     }
 
-    .swiper-button-next:after,
-    .swiper-button-prev:after {
-        font-family: 'Linearicons-Free';
-        font-size: 14px;
-        color: #613ba6;
-    }
-
-    .swiper-button-next:after {
-        content: "\e876";
-    }
-
-    .swiper-button-prev:after {
-        content: "\e875";
-    }
-
-    .swiper-button-prev,
-    .swiper-button-next {
+    .feedback__arrow-right,
+    .feedback__arrow-left {
         background-color: #fff;
         width: 50px;
         height: 50px;
         border-radius: 50%;
         box-shadow: 0px 4px 15px 0px rgba(67, 67, 67, 0.2);
-        transition: background-color 0.3s;
-        top: 330px;
+        top: 320px;
+        z-index: 1;
         outline-color: $btn;
+        transition: background-color 0.3s;
+        outline: transparent;
+
+        &:focus {
+            border: 2px solid $btn;
+        }
 
         &:hover {
             background-color: $tag-btn;
         }
+
+        &:active {
+            box-shadow: 0px 0px 5px $btn;
+        }
+
+        &::after {
+            color: #613ba6;
+        }
     }
 
-    .swiper-button-prev {
-        left: -10px;
+    &__arrow-left {
+        left: -25px;
     }
 
-    .swiper-button-next {
-        right: -10px;
+    &__arrow-right {
+        right: -25px;
     }
 }
-
-.feedback__user {
-    margin-bottom: 25px;
-
-    .user__img {
-        width: 80px;
-        height: 80px;
+@media(max-width:1200px) {
+    .feedback {
+        &__arrow-left {
+            left: -13px;
+        }
+        &__arrow-right {
+            right: -13px;
+        }
     }
-
-    .user__name {
-        font-size: 20px;
+}
+@media(max-width:576px) {
+    .feedback {
+        padding: 30px 0;
+        &__title {
+            font-size: 24px;
+        }
+        &__text {
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+        &__items {
+            margin-bottom: 20px;
+        }
+        &__item {
+            padding: 20px;
+            &::before {
+                font-size: 50px;
+                top: 24px;
+                right: 20px;
+            }
+        }
+       &__user {
+           .user__img {
+            width: 40px;
+            height: 40px;
+           }
+           .user__name {
+               font-size: 16px;
+           }
+           .feedback__profession {
+               font-size: 15px;
+           }
+       }
+       &__item-text {
+           font-size: 15px;
+       }
+    }
+}
+@media(max-width:320px) {
+    .feedback {
+        &__title {
+            font-size: 20px;
+        }
+        &__text {
+            font-size: 14px;
+        }
+        &__item {
+            &::before {
+                font-size: 40px;
+            }
+        }
+        &__user {
+            margin-bottom: 10px;
+            .user__img {
+                margin-right: 5px;
+            }
+            .user__name {
+                font-size: 15px;
+            }
+            .feedback__profession {
+                font-size: 14px;
+            }
+        }
+        &__item-text {
+            font-size: 14px;
+        }
     }
 }

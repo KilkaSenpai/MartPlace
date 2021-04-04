@@ -21,12 +21,16 @@
       top: 0;
       max-width: 70px;
       height: 45px;
+      line-height: 1;
   
       &::before {
         font-family: 'Linearicons-Free';
         content: "\e86f";
-        font-size: 15px;
-        color: #fff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        margin-left: 3px;
       }
     }
   }

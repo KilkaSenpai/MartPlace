@@ -1,5 +1,5 @@
 .advantages {
-    padding: 100px 0;
+    padding: 110px 0;
     text-align: center;
 
     &__title {
@@ -21,9 +21,11 @@
     &__item-wrap {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         list-style: none;
         column-gap: 30px;
         row-gap: 30px;
+        counter-reset: section;
     }
 
     &__item {
@@ -35,36 +37,14 @@
         border-radius: 4px;
 
         &::after {
+            content: counters(section, ".");
+            counter-increment: section;
             position: absolute;
             left: 20px;
             top: 0;
             font-size: 48px;
             color: #e5eafe;
             font-weight: 300;
-        }
-
-        &--num-1::after {
-            content: '01';
-        }
-
-        &--num-2::after {
-            content: '02';
-        }
-
-        &--num-3::after {
-            content: '03';
-        }
-
-        &--num-4::after {
-            content: '04';
-        }
-
-        &--num-5::after {
-            content: '05';
-        }
-
-        &--num-6::after {
-            content: '06';
         }
     }
 
@@ -104,8 +84,67 @@
         margin-bottom: 15px;
         @include text-clamp(1);
     }
+
     &__item-text {
         @include text-clamp(4);
     }
+}
 
+@media(max-width:576px) {
+    .advantages {
+        padding: 30px 0;
+
+        &__title {
+            font-size: 24px;
+        }
+
+        &__text {
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        &__img {
+            margin-bottom: 0;
+        }
+
+        &__item-title {
+            margin-bottom: 0;
+        }
+
+        &__item-text {
+            font-size: 15px;
+        }
+    }
+}
+
+@media(max-width:320px) {
+    .advantages {
+        padding: 30px 0;
+
+        &__title {
+            font-size: 20px;
+        }
+
+        &__text {
+            font-size: 14px;
+        }
+
+        &__item {
+            padding: 10px 10px 25px;
+            &::after {
+                font-size: 35px;
+            }
+        }
+        &__img {
+            font-size: 50px;
+        }
+
+        &__item-title {
+            font-size: 20px;
+        }
+
+        &__item-text {
+            font-size: 14px;
+        }
+    }
 }

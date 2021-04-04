@@ -8,8 +8,8 @@
         background-position: center;
         color: #fff;
         width: 100%;
-        min-height: 561px;
-        padding: 100px 0px;
+        height: 561px;
+        padding: 100px 15px;
 
         &--blue {
             background-color: $btn;
@@ -17,15 +17,6 @@
             .services__img {
                 width: 120px;
                 height: 103px;
-            }
-
-            .services__link {
-                color: $btn;
-
-                &:hover {
-                    background-color: $btn;
-                    color: #fff;
-                }
             }
         }
 
@@ -35,15 +26,6 @@
             .services__img {
                 width: 100px;
                 height: 100px;
-            }
-
-            .services__link {
-                color: #7347c1;
-
-                &:hover {
-                    background-color: #7347c1;
-                    color: #fff;
-                }
             }
         }
     }
@@ -62,15 +44,42 @@
         max-width: 580px;
         width: 100%;
         margin: 0 auto;
-        margin-bottom: 40px;
+        margin-bottom: 50px;
         @include text-clamp(2);
     }
 
     &__link {
         background-color: #fff;
-        padding: 17px 36px;
+        max-width: 190px;
+        width: 100%;
+        padding: 11px 25px;
         box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s;
+        color: $btn;
     }
-
+}
+@media(max-width:992px) {
+    .services {
+        &__title {
+            font-size: 24px;
+        }
+    }
+}
+@media(max-width:576px) {
+    .services {
+        flex-direction: column;
+        &__item {
+            padding: 30px 15px;
+            height: 330px;
+        }
+        &__img {
+            margin-bottom: 0;
+        }
+        &__title {
+            font-size: 20px;
+        }
+        &__text {
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+    }
 }

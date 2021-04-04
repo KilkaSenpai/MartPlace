@@ -10,7 +10,7 @@
         text-align: center;
         max-width: 50%;
         width: 100%;
-        padding: 60px 0;
+        padding: 55px 15px;
 
         &+& {
             border-left: 1px solid #e8eaf3;
@@ -24,6 +24,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        margin-bottom: 20px;
     }
 
     &__text {
@@ -33,5 +34,37 @@
 
     &__text-name {
         color: $btn;
+    }
+}
+
+@media(max-width:576px) {
+    .guarantee {
+        padding: 30px 0;
+
+        &__inner {
+            flex-direction: column;
+        }
+
+        &__item {
+            padding: 0;
+            max-width: 100%;
+        }
+
+        &__item+.guarantee__item {
+            border: none;
+            margin-top: 25px;
+        }
+
+        &__img {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media(max-width:320px) {
+    .guarantee {
+        &__text {
+            font-size: 20px;
+        }
     }
 }

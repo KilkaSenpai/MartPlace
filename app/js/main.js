@@ -7,28 +7,58 @@ $(function () {
 
   new Swiper('.resume__container', {
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.resume__arrow-right',
+      prevEl: '.resume__arrow-left',
     },
     loop: true,
   });
   new Swiper('.followers__container', {
     slidesPerView: 3,
     spaceBetween: 30,
+    centeredSlides:true,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.followers__arrow-right',
+      prevEl: '.followers__arrow-left',
     },
     loop: true,
+    breakpoints: {
+      1200: {
+        slidesPerView: 3,
+      },
+      1000: {
+        slidesPerView: 2.7,
+        spaceBetween: 10,
+      },
+      790: {
+        slidesPerView: 2.2,
+      },
+      650: {
+        slidesPerView: 1.7,
+      },
+      570: {
+        slidesPerView: 1.4,
+      },
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
+    },
   });
   new Swiper('.feedback__container', {
-    slidesPerView: 2,
     spaceBetween: 30,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.feedback__arrow-right',
+      prevEl: '.feedback__arrow-left',
     },
     loop: true,
+    breakpoints: {
+      992: {
+        slidesPerView: 2,
+      },
+      320: {
+        slidesPerView: 1,
+      },
+    },
   });
 
   $(".product-card__star").rate(options);
@@ -36,4 +66,7 @@ $(function () {
     initial_value: 4.5,
     readonly: true,
   }
+});
+$(".menu__burger").on("click", function () {
+  $(".menu__inner").slideToggle("slow");
 });
