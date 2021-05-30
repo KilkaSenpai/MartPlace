@@ -1,4 +1,5 @@
 @import 'fonts';
+@import 'mixins';
 @import 'vars';
 @import 'global';
 @import 'components/header';
@@ -19,3 +20,7 @@
 @import 'pages/home/news';
 @import 'pages/home/guarantee';
 @import 'pages/home/banner';
+@import 'components/banner-top';
+@import 'pages/category/top-filter';
+@import 'pages/category/aside-filter';
+@import 'pages/category/product-list';

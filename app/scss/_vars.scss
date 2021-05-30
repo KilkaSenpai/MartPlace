@@ -4,10 +4,7 @@ $hover-blue:#145fb0;
 $tag:#7347c1;
 $tag-btn:#f1f3f6;
 $hover-purple:#613ba6;
-
-@mixin text-clamp($lines) {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: $lines;
-}
+$r-xl: 1200;
+$r-lg: 992;
+$r-md: 768;
+$r-sm: 576;

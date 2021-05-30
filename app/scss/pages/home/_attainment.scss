@@ -1,11 +1,19 @@
 .attainment {
   padding: 200px 0 115px;
 
+  @include r($r-xl) {
+    padding: 90px 0 0 0;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     list-style: none;
+
+    @include r($r-xl) {
+      justify-content: center;
+    }
   }
 
   &__item {
@@ -15,6 +23,10 @@
     text-align: center;
     border-radius: 4px;
     transition: box-shadow 0.3s;
+
+    @include r($r-sm) {
+      padding: 25px 15px 20px;
+    }
 
     &:hover {
       box-shadow: 0 2px 50px 0 rgba(0, 0, 0, 0.08);
@@ -36,42 +48,16 @@
     font-size: 24px;
     color: #010101;
     margin-bottom: 10px;
+
+    @include r($r-sm) {
+      font-size: 20px;
+    }
   }
 
   &__text {
     @include text-clamp(4);
-  }
-}
 
-@media(max-width:1200px) {
-  .attainment {
-    padding: 90px 0 0 0;
-
-    &__inner {
-      justify-content: center;
-    }
-  }
-}
-
-@media(max-width:576px) {
-  .attainment {
-    &__item {
-      padding: 25px 15px 20px;
-    }
-
-    &__text {
-      font-size: 15px;
-    }
-  }
-}
-
-@media(max-width:320px) {
-  .attainment {
-    &__title {
-      font-size: 20px;
-    }
-
-    &__text {
+    @include r($r-sm) {
       font-size: 14px;
     }
   }

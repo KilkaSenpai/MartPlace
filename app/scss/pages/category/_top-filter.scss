@@ -1,0 +1,147 @@
+.top-filter {
+    margin-bottom: 80px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px 0 rgba(108, 111, 115, 0.1);
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 27px 0;
+
+        @include r($r-lg) {
+            flex-direction: column;
+            justify-content: space-between;
+            padding-bottom: 17px;
+        }
+    }
+
+    &__btn {
+        padding: 0;
+        color: $text;
+        background-color: transparent;
+        transition: color 0.3s;
+        margin-right: 35px;
+
+        &:hover {
+            color: $btn;
+        }
+
+        &:active {
+            box-shadow: 0 0 5px $btn;
+        }
+    }
+
+    &__category {
+        width: 100%;
+
+        @include r($r-lg) {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__form {
+        max-width: 592px;
+        width: 100%;
+    }
+
+    &__form-inner {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+
+        @include r($r-lg) {
+            justify-content: center;
+        }
+    }
+
+    .select2-container {
+        width: 220px !important;
+
+        @include r($r-lg) {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .top-filter__select {
+        border: 1px solid #eceff2;
+        border-radius: 3px;
+        height: 44px;
+        padding: 8px 50px 8px 20px;
+        position: relative;
+        outline-color: $btn;
+
+        &::before {
+            position: absolute;
+            content: "\e874";
+            right: 18px;
+            top: 12px;
+            font-family: 'Linearicons-Free';
+            font-size: 10px;
+            color: $text;
+        }
+    }
+
+    .select2-container .select2-selection--single .select2-selection__rendered {
+        padding: 0;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        color: $text;
+    }
+
+    &__option {
+        color: $text;
+        border: 1px solid #eceff2;
+        border-radius: 3px;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        display: none;
+    }
+
+    &__show-wrap {
+        max-width: 100px;
+        padding: 6px 19px;
+        border: 1px solid #eceff2;
+        border-radius: 3px;
+
+        @include r($r-lg) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__show {
+        padding: 0;
+        background-color: transparent;
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+
+        &+& {
+            margin-left: 10px;
+        }
+
+        &.active {
+            .top-filter__svg {
+                fill: $btn;
+            }
+        }
+
+        &:active {
+            box-shadow: 0 0 5px $btn;
+        }
+    }
+
+    &__svg {
+        fill: #a7abb2;
+        transition: fill 0.3s;
+
+        &:hover {
+            fill: $btn;
+        }
+    }
+}

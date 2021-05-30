@@ -1,9 +1,17 @@
 .guarantee {
     text-align: center;
 
+    @include r($r-sm) {
+        padding: 30px 0;
+    }
+
     &__inner {
         display: flex;
         justify-content: space-between;
+
+        @include r($r-sm) {
+            flex-direction: column;
+        }
     }
 
     &__item {
@@ -12,8 +20,18 @@
         width: 100%;
         padding: 55px 15px;
 
+        @include r($r-sm) {
+            padding: 0;
+            max-width: 100%;
+        }
+
         &+& {
             border-left: 1px solid #e8eaf3;
+
+            @include r($r-sm) {
+                border: none;
+                margin-top: 25px;
+            }
         }
     }
 
@@ -25,46 +43,22 @@
         background-repeat: no-repeat;
         background-size: cover;
         margin-bottom: 20px;
+
+        @include r($r-sm) {
+            margin-bottom: 0;
+        }
     }
 
     &__text {
         font-size: 24px;
         color: #000;
+
+        @include r($r-sm) {
+            font-size: 20px;
+        }
     }
 
     &__text-name {
         color: $btn;
-    }
-}
-
-@media(max-width:576px) {
-    .guarantee {
-        padding: 30px 0;
-
-        &__inner {
-            flex-direction: column;
-        }
-
-        &__item {
-            padding: 0;
-            max-width: 100%;
-        }
-
-        &__item+.guarantee__item {
-            border: none;
-            margin-top: 25px;
-        }
-
-        &__img {
-            margin-bottom: 0;
-        }
-    }
-}
-
-@media(max-width:320px) {
-    .guarantee {
-        &__text {
-            font-size: 20px;
-        }
     }
 }

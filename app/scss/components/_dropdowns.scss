@@ -7,11 +7,11 @@
     border-top: 1px solid $btn;
     border-radius: 0 0 3px 3px;
     width: 100%;
-    box-shadow: 0px 5px 40px 0px rgba(82, 85, 90, 0.2);
+    box-shadow: 0 5px 40px 0 rgba(82, 85, 90, 0.2);
     height: 0;
     overflow: hidden;
     border: none;
-    transition: all .5s;
+    transition: color 0.5s, background-color 0.5s;
 
     &::before {
         position: absolute;
@@ -42,7 +42,7 @@
         }
 
         &:active {
-            box-shadow: 0px 0px 5px $btn;
+            box-shadow: 0 0 5px $btn;
         }
     }
 
@@ -112,8 +112,7 @@
             position: relative;
 
             &::before {
-                position: absolute;
-                font-family: 'Linearicons-Free';
+                @include linearicons();
                 font-size: 15px;
                 right: 7px;
                 z-index: 1;
@@ -177,6 +176,10 @@
                 }
             }
         }
+
+        @include r($r-xl) {
+            display: none;
+        }
     }
 
     &--messages {
@@ -202,9 +205,8 @@
                 margin-bottom: 10px;
 
                 &::before {
-                    font-family: 'Linearicons-Free';
+                    @include linearicons();
                     content: "";
-                    position: absolute;
                     left: 85px;
                     top: 0;
                     font-size: 15px;
@@ -231,6 +233,10 @@
 
         .dropdowns__title {
             padding: 0 25px;
+        }
+
+        @include r($r-xl) {
+            display: none;
         }
     }
 
@@ -315,9 +321,8 @@
                 transition: background-color 0.3s;
 
                 &::after {
+                    @include linearicons();
                     content: "\e811";
-                    position: absolute;
-                    font-family: 'Linearicons-Free';
                     font-size: 15px;
                     color: $text;
                     top: 50%;
@@ -330,7 +335,7 @@
                 }
 
                 &:active {
-                    box-shadow: 0px 0px 5px $hover-purple;
+                    box-shadow: 0 0 5px $hover-purple;
                 }
             }
 
@@ -385,10 +390,14 @@
                     }
 
                     &:active {
-                        box-shadow: 0px 0px 5px $hover-purple;
+                        box-shadow: 0 0 5px $hover-purple;
                     }
                 }
             }
+        }
+
+        @include r($r-xl) {
+            display: none;
         }
     }
 
@@ -407,9 +416,8 @@
             padding-left: 40px;
 
             &::before {
-                position: absolute;
+                @include linearicons();
                 left: 10px;
-                font-family: 'Linearicons-Free';
             }
 
             &--user {
@@ -478,6 +486,10 @@
                 }
             }
         }
+
+        @include r($r-xl) {
+            display: none;
+        }
     }
 
     &--list {
@@ -515,7 +527,7 @@
         transform: translate(81%);
     }
 
-    &--allProducts {
+    &--all-products {
         transform: translate(29%);
     }
 
@@ -537,7 +549,7 @@
             max-width: 410px;
             width: 100%;
 
-            &--smoll {
+            &--small {
                 max-width: 165px;
             }
         }

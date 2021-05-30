@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('../parts/_head.html')
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            @@include('../parts/_header.html') @@include('../parts/_banner-top.html')
+            <div class="product-page">
+                @@include('../parts/category/_top-filter.html')
+                <div class="product-page__inner">
+                    <div class="container">
+                        <div class="product-page__sections">
+                            @@include('../parts/category/_aside-filter.html')
+                            @@include('../parts/category/_product-list.html')
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @@include('../parts/_banner.html')
+        @@include('../parts/_footer.html')
+    </div>
+    @@include('../parts/_footer-scripts.html')
+</body>
+
+</html>
